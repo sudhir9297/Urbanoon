@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home | MySite</title>
+    <meta charset="UTF-8" />
+      
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--font Nutino-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+    <style>
+    @-ms-viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    @-o-viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    @viewport{
+        width: device-width;
+        zoom: 1;
+    }
+    .filterDiv {
+  float: left;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border-radius: 24px;
+  border: 1px solid #F29595;
+  outline: none;
+  padding: 12px 16px;
+    font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #F29595;
+}
+
+.drplist{
+    list-style: none;
+    padding: 0;
+}
+
+
+.drplist ul{   
+    list-style: none;
+    background: #f2f2f2;
+}
+
+    .drplist ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        width: 100%;
+        text-align: center;
+    }
+    .drplist ul li a{
+        display: block;
+        padding: 8px 25px;
+        color: #333;
+        text-decoration: none;
+    }
+    .drplist ul li a:hover{
+        color: #fff;
+        background: #939393;
+    }
+    .drplist ul li ul.dropdown-menu{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #f2f2f2;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    .drplist ul li ul.dropdown-menu li{
+        display: block;
+    }
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+
+    </style>
+  </head>
+
+  <body>
+    <!--Header : section 1-->
+    <section class="scrollspy" id="home">
+        <nav class="nav" id="nav">
+            <div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks" id="mainNav">
+                        <li class="menu_item"><a href="#hero" data-easing="linear" class="active" data-scrollspy="#home" >Home</a></li>
+                        <li class="menu_item"><a  href="#about" data-easing="linear" data-scrollspy="#about">About</a></li>
+                        <li class="menu_item"><a  href="#product" data-easing="linear" data-scrollspy="#product">Products</a></li>
+                        <li class="menu_item"><a  href="warrenty.html" data-easing="linear" data-scrollspy="#warrenty">Warrenty</a></li>
+                        <li class="menu_item"><a  href="#contacts" data-easing="linear" data-scrollspy="#contacts">Contact</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+    </section>
+   
+
+<!--section 2 the entire content-->
+<!--hero-->
+<section class="scrollspy hero" id="hero" >
+    <div class="hero_container">
+        <img src="img/1.jpg" class="image-container" alt="food">
+        <div>
+            <img class="logo-container" src="img/logo.jpg" alt="logo">
+        </div>
+    </div>
+</section>
+
+<!---second section About us---->
+<section class="scrollspy" id="about">
+        <div class="container">
+          <h1 id="title" class="title">About Us</h1>
+          <div class="row text-center">
+            <div class=" col-md-6 About_us_content">
+                <p>
+                    We are a family business aspiring to deliver unforgettable culinary experiences to all of you while safeguarding the interest of the generations to come.
+                </p>
+                <p>
+                    We select our products around our passion for quality, natural and fresh ingredients.  
+                    Passion for perfection and attention to the slightest detail make the profile of <b>urban noon</b>, a brand committed to high-quality products and to a customer-centric approach.
+                </p>
+                <p>
+                    We care about sustainability. As parents, we believe our children will have the possibility to witness the beauties of our nature as we can today, we just have to make a change as individuals and as a community. The time for change is now. Using eco-friendly products is the way forward in preserving our endangered ecosystem.
+                </p>
+                <p>
+                    Our approach is to create sustainable products that help the environment without compromising on quality, the beautiful design, or your comfort and will be used for many years to come.
+                </p>
+            </div>
+            <div class="col-md-6 text-center ">
+              <img
+                src="img/about_us.jpg"
+                class="img-fluid img-responsive banner_image img-rounded"
+              />
+            </div>
+          </div>
+        </div>
+</section>
+
+<section class="scrollspy" id="product">
+    <div class="container-fluid">
+        <h1 id="title" class="title">Products</h1>
+        <div id="hide">
+            <div id="myBtnContainer" >
+                <button class="btn active" onclick="filterSelection('all')">Product lists</button>
+                <button class="btn" onclick="filterSelection('product1')"> Product 1</button>
+                <button class="btn" onclick="filterSelection('product2')"> Product 2</button>
+                <button class="btn" onclick="filterSelection('product3')"> Product 3</button>
+                <button class="btn" onclick="filterSelection('product4')"> Product 4</button>
+            </div>
+        </div>
+
+          <div  >
+            <ul class="drplist">
+                <li class="dropdown" id="hide2">
+                    <a>Products List &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="filterSelection('all')">All</a></li>
+                        <li><a onclick="filterSelection('product1')">Product 1</a></li>
+                        <li><a onclick="filterSelection('product2')">Product 2</a></li>
+                        <li><a onclick="filterSelection('product3')">Product 3</a></li>
+                        <li><a onclick="filterSelection('product4')">Product 4</a></li>
+                    </ul>
+                </li>
+                <li>
+                        <h1 class="product_title filterDiv all">All Product</h1>
+                        <h1 class="product_title filterDiv product1">First Product Name</h1>
+                        <h1 class="product_title filterDiv product2">Second Product Name</h1>
+                        <h1 class="product_title filterDiv product3">Third Product Name</h1>
+                        <h1 class="product_title filterDiv product4">Fourth Product Name</h1>
+                </li>
+            </ul>
+            
+        </div>
+        
+          
+        <div class="container-fluid gallery-container" >
+            <div class="tz-gallery">
+                <div class="row ">
+                    <div class="col filterDiv product1  all img_cont">
+                        <a class="lightbox" data-caption="Product 1 image 1" href="img/p1_01.jpg">
+                            <img src="img/p1_01.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont" >
+                        <a class="lightbox"  data-caption="Product 1 image 2"href="img/p1_02.jpg">
+                            <img src="img/p1_02.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont">
+                        <a class="lightbox"  data-caption="Product 1 image 3" href="img/p1_03.jpg">
+                            <img src="img/p1_03.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont">
+                        <a class="lightbox"  data-caption="Product 1 image 4" href="img/p1_04.jpg">
+                            <img src="img/p1_04.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont">
+                        <a class="lightbox"  data-caption="Product 1 image 5" href="img/p1_05.jpg">
+                            <img src="img/p1_05.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont">
+                        <a class="lightbox"  data-caption="Product 1 image 6" href="img/p1_06.jpg">
+                            <img src="img/p1_06.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 1 image 7" href="img/p1_07.jpg">
+                            <img src="img/p1_07.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 1 image 8" href="img/p1_08.jpg">
+                            <img src="img/p1_08.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product1 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 1 image 9" href="img/p1_09.jpg">
+                            <img src="img/p1_09.jpg" >
+                        </a>
+                    </div>
+                    <div class=" col-md-12  filterDiv product1 Desc_Section">
+                        <p>
+                            <span>CONVENIENT ONE HAND OPERATION: </span>The high quality salt and pepper grinders are battery operated and incredibly easy to use with their smart one-hand design so you can season your food with just the push of a button. Each mill needs only 4 AA batteries (not included).
+                        </p>
+                        <p>
+                            <span>ADJUSTABLE AND FUNCTIONAL:  </span>These grinders have light to make it easier to add the right amount of pepper or salt to your dish. You can easily adjust the coarseness for perfect grind and seasoning. Bottom caps prevent leakage and create the right humid environment to keep your salt and pepper fresh.
+                        </p>
+                        <p>
+                            <span>PREMIUM QUALITY: </span>Electric salt and pepper grinders are made of the highest quality stainless steel and BPA-free acrylic glass and have a rustproof ceramic core to ensure smooth and easy grind.
+                        </p>
+                        <p>
+                            <span>AMAZING GIFT FOR THE ONES YOU LOVE: </span>These elegant sleek grinders are ideal for cooking in the kitchen and grilling BBQ outside and a stylish addition to your kitchen and dinner table.
+                        </p>
+                    </div>
+                    <div class="filterDiv product1 col-md-12 button">
+                        <div class="buy_button">
+                            <a href="https://www.google.in/"><img src="img/amazon button.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!---product 2-->
+                    <div class="col filterDiv product2 all img_cont">
+                        <a class="lightbox"   data-caption="Product 2 image 1" href="img/p2_01.jpg">
+                            <img src="img/p2_01.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont" >
+                        <a class="lightbox"  data-caption="Product 2 image 2" href="img/p2_02.jpg">
+                            <img src="img/p2_02.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont">
+                        <a class="lightbox"  data-caption="Product 2 image 3" href="img/p2_03.jpg">
+                            <img src="img/p2_03.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont">
+                        <a class="lightbox"  data-caption="Product 2 image 4" href="img/p2_04.jpg">
+                            <img src="img/p2_04.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont">
+                        <a class="lightbox"  data-caption="Product 2 image 5" href="img/p2_05.jpg">
+                            <img src="img/p2_05.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont">
+                        <a class="lightbox"   data-caption="Product 2 image 6" href="img/p2_06.jpg">
+                            <img src="img/p2_06.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 2 image 7" href="img/p2_07.jpg">
+                            <img src="img/p2_07.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 2 image 8" href="img/p2_08.jpg">
+                            <img src="img/p2_08.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product2 img_cont" id="hide">
+                        <a class="lightbox"   data-caption="Product 2 image 9" href="img/p2_09.jpg">
+                            <img src="img/p2_09.jpg" >
+                        </a>
+                    </div>
+
+                    <div class=" col-md-12 filterDiv product2  Desc_Section">
+                        <p>
+                            <span>CONVENIENT ONE HAND OPERATION: </span>The high quality salt and pepper grinders are battery operated and incredibly easy to use with their smart one-hand design so you can season your food with just the push of a button. Each mill needs only 4 AA batteries (not included).
+                        </p>
+                        <p>
+                            <span>ADJUSTABLE AND FUNCTIONAL:  </span>These grinders have light to make it easier to add the right amount of pepper or salt to your dish. You can easily adjust the coarseness for perfect grind and seasoning. Bottom caps prevent leakage and create the right humid environment to keep your salt and pepper fresh.
+                        </p>
+                        <p>
+                            <span>PREMIUM QUALITY: </span>Electric salt and pepper grinders are made of the highest quality stainless steel and BPA-free acrylic glass and have a rustproof ceramic core to ensure smooth and easy grind.
+                        </p>
+                        <p>
+                            <span>AMAZING GIFT FOR THE ONES YOU LOVE: </span>These elegant sleek grinders are ideal for cooking in the kitchen and grilling BBQ outside and a stylish addition to your kitchen and dinner table.
+                        </p>
+                    </div>
+                    <div class="filterDiv product2 col-md-12 button">
+                        <div class="buy_button">
+                            <a href="https://www.ebay.in/"><img src="img/amazon button.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!--product 3-->
+                    <div class="col filterDiv product3 all img_cont">
+                        <a class="lightbox" data-caption="Product 3 image 1" href="img/p3_01.jpg">
+                            <img src="img/p3_01.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont" >
+                        <a class="lightbox" data-caption="Product 3 image 2" href="img/p3_02.jpg">
+                            <img src="img/p3_02.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont">
+                        <a class="lightbox" data-caption="Product 3 image 3" href="img/p3_03.jpg">
+                            <img src="img/p3_03.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont">
+                        <a class="lightbox" data-caption="Product 3 image 4" href="img/p3_04.jpg">
+                            <img src="img/p3_04.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont">
+                        <a class="lightbox" data-caption="Product 3 image 5" href="img/p3_05.jpg">
+                            <img src="img/p3_05.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont">
+                        <a class="lightbox" data-caption="Product 3 image 6" href="img/p3_06.jpg">
+                            <img src="img/p3_06.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 3 image 7" href="img/p3_07.jpg">
+                            <img src="img/p3_07.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont" id="hide">
+                        <a class="lightbox"  data-caption="Product 3 image 8" href="img/p3_08.jpg">
+                            <img src="img/p3_08.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product3 img_cont" id="hide">
+                        <a class="lightbox" data-caption="Product 3 image 9" href="img/p3_09.jpg">
+                            <img src="img/p3_09.jpg" >
+                        </a>
+                    </div>
+                    <div class=" col-md-12 filterDiv product3 Desc_Section">
+                        <p>
+                            <span>UNIQUE DESIGN:</span>This one-of-a kind salt and pepper mill set with high quality stainless steel on both bottom and top sections has made it stand-out among the all clear body grinder sets and is never going to break or get rusty. Elegant Stand included.
+                        </p>
+                        <p>
+                            <span>PERFECT GIFT IDEA:</span>This classy grinder set comes with an amazing Premium Gift-Box, which makes it a luxurious present for every occasion.
+                        </p>
+                        <p>
+                            <span>PREMIUM QUALITY: </span>Ideal sized salt and pepper shakers are made out of the highest quality brushed stainless steel that is built to last and includes a light acrylic body and a durable ceramic rotor.
+                        </p>  
+                    </div>
+                    <div class="filterDiv product3 col-md-12 button">
+                        <div class="buy_button">
+                            <a href="https://www.flipkart.com/"><img src="img/amazon button.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!--product 4-->
+                    <div class="col filterDiv product4 all img_cont">
+                        <a class="lightbox" data-caption="Product 4 image 1" href="img/p4_01.jpg">
+                            <img src="img/p4_01.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont" >
+                        <a class="lightbox" data-caption="Product 4 image 2" href="img/p4_02.jpg">
+                            <img src="img/p4_02.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont">
+                        <a class="lightbox" data-caption="Product 4 image 3" href="img/p4_03.jpg">
+                            <img src="img/p4_03.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont">
+                        <a class="lightbox" data-caption="Product 4 image 4" href="img/p4_04.jpg">
+                            <img src="img/p4_04.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont">
+                        <a class="lightbox" data-caption="Product 4 image 5" href="img/p4_05.jpg">
+                            <img src="img/p4_05.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont">
+                        <a class="lightbox" data-caption="Product 4 image 6" href="img/p4_06.jpg">
+                            <img src="img/p4_06.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont" id="hide">
+                        <a class="lightbox" data-caption="Product 4 image 7" href="img/p4_07.jpg">
+                            <img src="img/p4_07.jpg">
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont" id="hide">
+                        <a class="lightbox" data-caption="Product 4 image 8" href="img/p4_08.jpg">
+                            <img src="img/p4_08.jpg" >
+                        </a>
+                    </div>
+                    <div class="col filterDiv product4 img_cont" id="hide">
+                        <a class="lightbox" data-caption="Product 4 image 3" href="img/p4_09.jpg">
+                            <img src="img/p4_09.jpg" >
+                        </a>
+                    </div>
+
+                    <div class=" col-md-12 filterDiv product4 Desc_Section">
+                        <p>
+                            <span>ULTIMATE CONVENIENCE:</span>Our High-Quality crafted Reusable Cotton Mesh Produce bags fulfill your desire for zero waste lifestyle. They are made from superior quality GOTS certified organic cotton, beautifully designed and made to last. These double stitched hem cotton produce bags come with cotton drawstring with a wooden bead and can easily hold all your fruits and veggies. The tare weight on each bag is color-coded by sizes, so the weight of your eco bag can be easily deducted from your purchase
+                        </p>
+                        <p>
+                            <span>IDEAL COMBINATION TO FULFILL ALL YOUR NEEDS: </span>Size and quantity do matter. We have carefully selected a set of 7 pcs in 4 sizes . The set includes 2 LARGE (12”x 17”), 2 MEDIUM (12”x 14”), 2 SMALL (12”x 8”) and 1 SQUARE (13”x 13”) reusable cotton bag. The unique square bag is ideal for rounded vegetable like lettuce, cabbage and much more. Bags come in plastic-free packaging and will serve you well for years to come
+                        </p>
+                        <p>
+                            <span>SO MANY DIFFERENT USES  </span>perfect for grocery shopping, farmers market bag, for fruit, vegetables, nuts and bulk food, but they are also great for laundry, toy storage, travel and much, much more. Soft mesh design makes them foldable and lightweight. They are easily washable in cold water with hand or machine
+                        </p>
+                        <p>
+                            <span>PERFECT GIFT FOR PEOPLE WHO CARE ABOUT ENVIRONMENT:</span>Our strong & durable organic net zero produce bags are a thoughtful and useful gift for your eco-conscious friends.
+                        </p>
+                    </div>
+                    
+                    <div class="filterDiv product4 col-md-12 button">
+                        <div class="buy_button">
+                            <a href="https://www.amazon.in/"><img src="img/amazon button.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---Third section Footer---->
+<section class="scrollspy" id="contacts" >
+    <footer class="footer">
+        <div class="container-fluid" style="padding: 25px;">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12" >
+                    <div class="contact_us_text">
+                        <h5  class="text-md-right">Contact Us</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12" >
+                    <form name="contactform" method="post" action="send_form_email.php">
+                        <table>
+                            <tr><td>Name*</td>    
+                            <td><input required type="text" name="name" class="form-control" size="560" maxlength="20" ></td></tr>
+                            <tr><td>Email*</td>
+                            <td><input required type="email" name="email" class="form-control" size="560" maxlength="30"></td></tr>
+                            <tr><td>Subject*</td>    
+                            <td><input required type="text" name="subject" class="form-control" size="560" maxlength="9" ></td></tr>
+                            <tr><td>Message*</td>    
+                            <td><textarea type="text" name="message" class="form-control" size="560" maxlength="60"></textarea></td></tr>
+                            </tr>
+                          </table>
+
+                          <div style="height:30px;"><button type="submit" class="button_s" style="float: right;" name="submit">Send</button></div>
+                    </form>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-5 footer_contact">
+                    <h5>info@urbannoon.com</h5>
+                    <ul class="social">
+                        <li class="nav-item"><a href="" class="nav-link ml-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    </ul>
+                    <h4>© 2019 by urban noon®</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<div  data-easing="linear" class="up_arrow">
+   <a  href="#"><i class="fa fa-chevron-up fa-2x" aria-hidden="true" ></i></a> 
+</div>
+
+
+</section> 
+    <!--Script links-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="js/smooth-scroll.js"></script>
+      <script src="js/index.js"></script>   
+      <script src="js/simple-scrollspy.min.js"></script>
+
+     
+
+    </body>
+</html>
